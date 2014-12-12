@@ -63,4 +63,5 @@ def calendar(context, events, date=None, tz=None, **kwargs):
         "next": next,
         "grid": grid,
     })
+    context.update(kwargs)
     return context
