@@ -21,7 +21,7 @@ def delta(year, month, d):
 
 @register.inclusion_tag("kairios/calendar.html", takes_context=True)
 def calendar(context, events, date=None, tz=None, **kwargs):
-    cal.setfirstweekday(cal.SUNDAY)
+    cal.setfirstweekday(cal.MONDAY)
 
     if tz:
         today = timezone.localtime(timezone.now(), pytz.timezone(tz)).date()
